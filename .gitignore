@@ -1,0 +1,4 @@
+src/obj/*
+src/bin/*
+src/output/*
+src/config_files/preview_config.json

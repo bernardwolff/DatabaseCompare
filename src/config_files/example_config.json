@@ -1,0 +1,30 @@
+﻿{
+  "Comparisons": [
+    {
+      "ComparisonName": "Example Comparison",
+      "SummaryExportFilename": "summary.json",
+      "DifferencesFilename": "differences.json",
+      "DifferencesMatchFieldsFilename": "diff_userids.json",
+      "SourceOnlyFilename": "source_only.json",
+      "TargetOnlyFilename": "target_only.json",
+      "SourceSettings": {
+        "DatabaseType": "SQLServer",
+        "ConnString": "Data Source=XXXXXXXX;Initial Catalog=XXXX;User Id=XXXXXX;Password=XXXXXXXXX;MultipleActiveResultSets=True",
+        "Query": "select id as UserId, Roles from Users"
+      },
+      "TargetSettings": {
+        "DatabaseType": "MongoDB",
+        "ConnString": "mongodb://XXXXXXX:XXXXXXX@XXXXXXXXXX.mongodb.net:27017/XXXXXXXX?ssl=true&authSource=admin",
+        "TableName": "Users",
+        "Query": ""
+      },
+      "MatchFields": [
+        "UserId"
+      ],
+      "CompareFields": [
+        "ExpirationDateUtc",
+        "Roles"
+      ]
+    }
+  ]
+}
